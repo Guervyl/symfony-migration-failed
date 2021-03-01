@@ -1,0 +1,264 @@
+{% extends "layout1.html.twig" %}
+{% block title %}Test css{% endblock %}
+
+
+
+{% block head %}
+<meta description=""/>
+	 {% endblock %}
+{% block headStyle %}
+{{parent()}}
+h1.t-center{width: auto;}
+.t-center::selection{color: rgb(219, 12, 12);}
+*{font-weight: lighter;}
+body{}
+h1{}
+div.for-group-background-image{width: 700px;background-image: url(https://2624c88f0298812cf9d921317041bc2db94228fd.gvwc.deve/public/150e9505f79b42ec2ffba0274c768c0c.jpg);}
+strong.imagebackroundGroup{}
+code{}
+p.from-layout{}
+.t-center{text-align: center;}
+.t-center:hover{color: rgb(16, 78, 204);}
+.t-center::selection{}
+.group{color: rgb(4, 97, 0);background-color: rgb(140, 255, 0);font-weight: 900;margin-top: 50px;}
+.group::first-letter{color: rgb(255, 0, 0);}
+div.for-group-background-image{background-image: url(https://2624c88f0298812cf9d921317041bc2db94228fd.gvwc.deve/public/filemanager/6863430f83af074958cf2028afd5c567.png);width: 600px;height: 400px;background-repeat: no-repeat;background-size: cover;}
+body{}
+h1.t-center{}
+strong.imagebackroundGroup{color: rgb(39, 153, 4);}
+code{}
+p.imagebackgroundGroupToAdd{color: rgb(151, 109, 21);}
+p.imagebackgroundGroupToAdd:hover{color: rgb(0, 85, 153);}
+p.imageBackgroundGroupPseudoClasses{color: rgb(82, 8, 77);}
+p.imageBackgroundGroupPseudoClasses:hover{color: rgb(3, 137, 154);}
+
+{% endblock %}
+
+
+{% block section %}
+
+<div class="container" >
+
+<div class="row" >
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+
+<p >
+Paj sa f&egrave; test sou:
+
+
+<br />
+
+
+</p>
+
+<ul >
+
+<li >
+Extend yon layout. Li extend paj layout1 lan.
+
+
+<br />
+
+
+</li>
+
+<li style="color:rgb&lpar;9, 116, 11&rpar;;" >
+Ajoute style css inline sou eleman yo.
+
+
+</li>
+
+<li >
+Itilize 2 block de layout la.
+
+
+</li>
+
+</ul>
+
+<p >
+Propriete ki itilize yo:
+
+
+<br />
+
+
+</p>
+
+<ul >
+
+<li >
+Custom style.&nbsp;
+
+ 
+
+
+<br />
+
+
+</li>
+
+<li >
+Call parent de pwopriete layout la.
+
+ 
+
+
+<br />
+
+
+</li>
+
+<li >
+Inline or selector
+
+ 
+
+
+</li>
+
+<li >
+Pseudo class
+
+ 
+
+
+</li>
+
+<li >
+Selectors
+
+ 
+
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="row" >
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+
+<p style="font-weight:bold; background-color:rgb&lpar;250, 177, 255&rpar;;" >
+inline style e custom style
+
+
+<br />
+
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<h1 >
+Test sou gwoup css
+
+
+</h1>
+
+<p >
+Background image from css group
+
+
+</p>
+
+<div class="for-group-background-image" >
+
+</div>
+
+<strong class="imagebackroundGroup" >
+Yon lot selecteur nan gwoup css la. Li gen style color sou vert.
+
+
+</strong>
+
+<p class="imagebackgroundGroupToAdd" >
+Ajoute selekt&egrave; sa sou gwoup css la
+
+
+</p>
+
+<p class="imageBackgroundGroupPseudoClasses" >
+Ajoute yon style avek pseudo-class nan yon css-group
+
+
+</p>
+
+<hr />
+
+
+<h1 >
+Test sou gwoup css from-layout la
+
+
+</h1>
+
+<p class="from-layout" >
+A paragraph
+
+
+</p>
+{% endblock section %}
+
+{% block pye %}
+
+<hr />
+
+
+<h1 class="t-center" >
+M override block pye a.
+
+
+<br />
+
+
+</h1>
+{% endblock pye %}
+
+{% block soupye %}
+
+<hr />
+
+
+{% block subblock %}
+
+<p class="t-center" >
+Sa override sou block la.
+
+
+<br />
+
+
+</p>
+{% endblock subblock %}
+
+{{parent()}}
+
+<h4 class="t-center" >
+M rele &lbrace;&lbrace; parent &rbrace;&rbrace; sou block sa.
+
+ 
+
+
+</h4>
+
+<i class="group" >
+Italic text
+
+
+</i>
+{% endblock soupye %}
+{% block scripts %}
+{{parent()}}
+
+
+{% endblock %}

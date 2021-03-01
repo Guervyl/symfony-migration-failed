@@ -1,0 +1,28 @@
+{% extends "layoutCssTest.html.twig" %}
+
+
+
+
+{% block head %}
+<meta description=""/>
+	 {% endblock %}
+
+{% block section %}
+
+<p >
+A paragraph
+
+
+</p>
+
+<p class="added" >
+A paragraph
+
+
+</p>
+{% endblock section %}
+{% block scripts %}
+{{parent()}}
+
+
+{% endblock %}

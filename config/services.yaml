@@ -1,0 +1,28 @@
+parameters: null
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+    App\:
+        resource: ../src/
+        exclude:
+            - ../src/DependencyInjection/
+            - ../src/Entity/
+            - ../src/Kernel.php
+            - ../src/Tests/
+    App\Controller\:
+        resource: ../src/Controller/
+        tags:
+            - controller.service_arguments
+    guervyl.file_upload:
+        class: App\Service\FileUploader
+        arguments:
+            - '%kernel.project_dir%/../web/uploaded'
+    SimpleForm.upload_listener:
+        class: App\EventListener\SimpleFormUploadListener
+        arguments:
+            - '@guervyl.file_upload'
+            - null
+        tags:
+            -
+                name: doctrine.orm.entity_listener
